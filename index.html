@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Adventure Quest — Game 2D</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">AQ</div>
+      <div>
+        <h1>Adventure Quest — Demo 2D</h1>
+        <p class="lead">Game 2D bertema petualangan: kalahkan monster, naik level, selesaikan misi.</p>
+      </div>
+    </header>
+
+    <div class="content">
+      <section class="game-card">
+        <canvas id="game"></canvas>
+
+        <div class="controls">
+          <button id="btn-start" class="btn">Start</button>
+          <button id="btn-pause" class="btn">Pause</button>
+          <button id="btn-reset" class="btn">Restart</button>
+
+          <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
+            <div class="muted">Level: <strong id="ui-level">1</strong></div>
+            <div class="muted">Health:</div>
+            <div class="bar" title="Health"><i id="ui-health" style="width:100%"></i></div>
+          </div>
+        </div>
+
+        <div class="muted controls-info">
+          Kontrol: 
+          <span class="kbd">A / ←</span> kiri — 
+          <span class="kbd">D / →</span> kanan — 
+          <span class="kbd">W / ↑ / Space</span> lompat — 
+          <span class="kbd">J</span> serang
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <div class="stat"><div class="muted">Misi saat ini</div><div id="ui-mission">Kalahkan semua monster</div></div>
+        <div class="stat"><div class="muted">Monsters tersisa</div><div id="ui-enemies">0</div></div>
+        <div class="stat"><div class="muted">Skor</div><div id="ui-score">0</div></div>
+        <div class="stat"><div class="muted">Tahap / Total</div><div id="ui-stage">1 / 5</div></div>
+
+        <div class="desc">
+          <h4>Deskripsi</h4>
+          <p class="muted">Demo website game 2D sederhana. Kalahkan semua monster di tiap tahap untuk lanjut ke level berikutnya.</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      Butuh fitur tambahan (musik, sprite, atau save system)? Beri tahu saya.
+    </footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
